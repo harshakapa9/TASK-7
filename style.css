@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,body {
+    overflow-x: hidden;
+    }
+body{
+    width: 100%;
+    font-family: var(--ienet-font, "Outfit", sans-serif);
+    /* color: var(--ienet-text, #737177); */
+    font-size: 16px;
+    line-height: 1.75;
+    font-weight: 400;
+}
+.page-wrapper {
+    @apply relative mx-auto w-full min-w-[300px] overflow-hidden bg-[#251444];
+}
+
+.topbar-one {
+    @apply bg-transparent py-2 px-4;
+}
+
+.topbar-one__inner {
+    @apply bg-[#DF2339] rounded-b-[100px] py-2 px-4 flex;
+}
+
+.topbar-one__social {
+    @apply ml-auto;
+}
+
+.topbar-one__info__item {
+    @apply bg-[#DF2339] text-white py-1 px-2 mr-3 rounded;
+}
+
+.topbar-one__info__item a {
+    @apply text-white;
+}
+
+.topbar-one__info__icon {
+    @apply bg-[#DF2339] text-white p-1 rounded-full mr-2;
+}
+
+.topbar-one__right {
+    @apply ml-auto;
+}
+
+.topbar-one__social a {
+    @apply bg-[#DF2339] text-white p-2 rounded-full mr-2;
+}
+
+.topbar-one__social a:hover {
+    @apply bg-white text-[#DF2339];
+}
+
+/* Navigation */
+.menu-logo {
+    @apply hidden;
+}
+
+@media (max-width: 750px) {
+    .main-menu__list {
+        @apply hidden;
+    }
+    .menu-logo {
+        @apply block;
+    }
+    .page-wrapper {
+        @apply hidden;
+    }
+}
+
+.main-header__nav .menu-logo {
+    @apply hidden absolute top-0 left-0 p-2;
+}
+
+@media (max-width: 750px) {
+    .main-menu__list {
+        @apply hidden;
+    }
+    .main-header__nav .menu-logo {
+        @apply block;
+    }
+}
+
+/* tailwind.config.js */
+
+
+  
+  /* custom.css */
+  
+  .sticky-header {
+      @apply sticky top-0;
+  }
+  
+  .sticky-header--normal {
+      @apply sticky top-14;
+  }
+  
+  .main-header__toggler {
+      @apply block lg:hidden ml-3 text-white;
+  }
+  
+  .main-header--two.sticky-header--cloned {
+      @apply top-0 bg-white shadow-lg;
+  }
+  
+  .main-header--two.sticky-header--cloned .main-header__inner {
+      @apply px-5;
+  }
+  
+  @media (max-width: 1199px) {
+      .main-header--two.sticky-header--cloned .main-header__inner {
+          @apply p-2.5;
+      }
+  }
+  
+  @media (max-width: 767px) {
+      .main-header--two.sticky-header--cloned .main-header__inner {
+          @apply pr-0;
+      }
+  }
+  
+  @media (max-width: 768px) {
+      .main-header__nav {
+          @apply hidden flex-col bg-white absolute top-full left-0 right-0 border-t border-gray-200;
+      }
+  
+      .main-header__nav ul {
+          @apply flex-col items-start;
+      }
+  
+      .main-header__nav li {
+          @apply my-2.5 w-full;
+      }
+  
+      .main-header__nav a {
+          @apply text-gray-800 py-2.5 px-3.5 w-full block;
+      }
+  
+      .main-header__toggler {
+          @apply block;
+      }
+  
+      .mobile-nav__btn {
+          @apply flex;
+      }
+  
+      .main-header__nav.show {
+          @apply flex;
+      }
+  }
+  
